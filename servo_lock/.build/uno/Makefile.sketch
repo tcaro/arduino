@@ -1,0 +1,14 @@
+
+
+
+
+
+.build/uno/src/servo_lock.cpp : src/servo_lock.ino
+	@mkdir -p .build/uno/src
+	@echo [93msrc/servo_lock.ino[0m
+	@/usr/local/bin/ino preproc  -o $@ $^
+
+
+all : .build/uno/src/servo_lock.cpp
+	@true
+
